@@ -19,9 +19,11 @@ description: Boost Media (formerly BoostCTR) was a digital-advertising creative-
   brands across retail, education, financial services, healthcare and insurance, gaming, auto, and
   travel. Backed by Battery Ventures (Series C, $19M, 2014), Founder Collective, and 500 Global, the
   company raised about $42.8M total before being acquired by AdLabs Technology in April 2019. The
-  company is now closed and its former domain (boostmedia.com) no longer resolves; this profile is
+  company is now closed; its former domain (boostmedia.com) has been released and now serves a GoDaddy
+  parking lander, and the acquirer's own domain (adlabs.ai) no longer resolves. This profile is
   retained as a Battery Ventures portfolio record. No public API, developer portal, or specification
-  surface exists to enrich.
+  surface exists to enrich — the Internet Archive record of boostmedia.com shows a WordPress marketing
+  site and blog only, with no developer, docs, or API path ever published.
 url: https://raw.githubusercontent.com/api-evangelist/boost-media/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -30,10 +32,15 @@ x-backed-by:
 x-tier: stub
 x-tier-reason: portfolio-lead
 x-status: defunct
-x-status-detail: Acquired by AdLabs Technology in April 2019; operating status closed; domain boostmedia.com no longer resolves (DNS NXDOMAIN as of 2026-07-18).
+x-status-detail: Acquired by AdLabs Technology in April 2019 (all assets, patents, trademarks and the
+  website); operating status closed. Re-probed 2026-08-12 — boostmedia.com now RESOLVES (3.33.130.190,
+  NS domaincontrol.com) but serves a GoDaddy parking lander, and boostctr.com redirects to a HugeDomains
+  for-sale listing; the acquirer's domain adlabs.ai no longer resolves. The parking host answers HTTP 200
+  with the same 114-byte HTML redirect shell for EVERY path, including /.well-known/agent-card.json,
+  /openapi.json and /swagger.json — treat all such 200s as soft-404s, not as a served surface.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-08-12'
 tags:
 - Company
 - Advertising
@@ -50,7 +57,29 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-12'
+  status: nochange
+  artifacts_added: 0
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  note: Full contract-discovery pass run against boostmedia.com and boostctr.com; every /.well-known/*
+    and spec path returns a soft-200 parking shell, no real document. No artifacts written. Corrected the
+    stale "NXDOMAIN" claim in x-status-detail — the domain resolves again, but as a parked lander.
+x-coverage:
+  state: none
+  reason: defunct
+  detail: Boost Media closed after AdLabs Technology bought its assets in April 2019; boostmedia.com is
+    now a GoDaddy parking lander that soft-200s every path with a 114-byte HTML redirect shell, boostctr.com
+    redirects to a HugeDomains for-sale page, the acquirer's adlabs.ai does not resolve, and the Internet
+    Archive record of the site shows only a WordPress marketing blog with no developer or API path.
+  evidence:
+  - url: https://boostmedia.com/
+    status: 200
+  - url: https://boostmedia.com/.well-known/agent-card.json
+    status: 200
+  - url: https://boostmedia.com/openapi.json
+    status: 200
+  - url: https://boostctr.com/
+    status: 200
+  - url: https://adlabs.ai/
+    status: 0
+  checked: '2026-08-12'
