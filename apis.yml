@@ -38,7 +38,7 @@ x-status-detail: Acquired by AdLabs Technology in April 2019 (all assets, patent
   for-sale listing; the acquirer's domain adlabs.ai no longer resolves. The parking host answers HTTP 200
   with the same 114-byte HTML redirect shell for EVERY path, including /.well-known/agent-card.json,
   /openapi.json and /swagger.json — treat all such 200s as soft-404s, not as a served surface.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-08-12'
 tags:
