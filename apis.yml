@@ -51,7 +51,7 @@ x-status-detail: Acquired by AdLabs Technology in April 2019 (all assets, patent
   /openapi.json and /swagger.json — treat all such 200s as soft-404s, not as a served surface.
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-09-15'
+modified: '2026-09-16'
 tags:
 - Company
 - Advertising
@@ -61,6 +61,7 @@ tags:
 - Digital Advertising
 - Software-as-a-Service
 - AdTech
+- Defunct
 tags_raw:
 - Company
 - Advertising
@@ -70,6 +71,7 @@ tags_raw:
 - Digital Advertising
 - SaaS
 - AdTech
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
