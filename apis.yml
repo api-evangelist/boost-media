@@ -23,18 +23,18 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/boost-media.png
 name: Boost Media
-description: Boost Media (formerly BoostCTR) was a digital-advertising creative-optimization SaaS
-  platform that paired machine-learning analysis with a curated marketplace of more than 1,000 human
-  writers and designers to test and improve ad creative across paid search, social, video, and display
-  campaigns. Its technology powered roughly $1 billion in paid-search advertising for around 100 global
-  brands across retail, education, financial services, healthcare and insurance, gaming, auto, and
-  travel. Backed by Battery Ventures (Series C, $19M, 2014), Founder Collective, and 500 Global, the
-  company raised about $42.8M total before being acquired by AdLabs Technology in April 2019. The
-  company is now closed; its former domain (boostmedia.com) has been released and now serves a GoDaddy
-  parking lander, and the acquirer's own domain (adlabs.ai) no longer resolves. This profile is
-  retained as a Battery Ventures portfolio record. No public API, developer portal, or specification
-  surface exists to enrich — the Internet Archive record of boostmedia.com shows a WordPress marketing
-  site and blog only, with no developer, docs, or API path ever published.
+description: Boost Media (formerly BoostCTR) was a digital-advertising creative-optimization SaaS platform
+  that paired machine-learning analysis with a curated marketplace of more than 1,000 human writers and
+  designers to test and improve ad creative across paid search, social, video, and display campaigns.
+  Its technology powered roughly $1 billion in paid-search advertising for around 100 global brands across
+  retail, education, financial services, healthcare and insurance, gaming, auto, and travel. Backed by
+  Battery Ventures (Series C, $19M, 2014), Founder Collective, and 500 Global, the company raised about
+  $42.8M total before being acquired by AdLabs Technology in April 2019. The company is now closed; its
+  former domain (boostmedia.com) has been released and now serves a GoDaddy parking lander, and the acquirer's
+  own domain (adlabs.ai) no longer resolves. This profile is retained as a Battery Ventures portfolio
+  record. No public API, developer portal, or specification surface exists to enrich — the Internet Archive
+  record of boostmedia.com shows a WordPress marketing site and blog only, with no developer, docs, or
+  API path ever published.
 url: https://raw.githubusercontent.com/api-evangelist/boost-media/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -46,12 +46,12 @@ x-status: defunct
 x-status-detail: Acquired by AdLabs Technology in April 2019 (all assets, patents, trademarks and the
   website); operating status closed. Re-probed 2026-08-12 — boostmedia.com now RESOLVES (3.33.130.190,
   NS domaincontrol.com) but serves a GoDaddy parking lander, and boostctr.com redirects to a HugeDomains
-  for-sale listing; the acquirer's domain adlabs.ai no longer resolves. The parking host answers HTTP 200
-  with the same 114-byte HTML redirect shell for EVERY path, including /.well-known/agent-card.json,
+  for-sale listing; the acquirer's domain adlabs.ai no longer resolves. The parking host answers HTTP
+  200 with the same 114-byte HTML redirect shell for EVERY path, including /.well-known/agent-card.json,
   /openapi.json and /swagger.json — treat all such 200s as soft-404s, not as a served surface.
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-08-12'
+modified: '2026-09-15'
 tags:
 - Company
 - Advertising
@@ -61,6 +61,7 @@ tags:
 - Digital Advertising
 - Software-as-a-Service
 - AdTech
+- Defunct
 tags_raw:
 - Company
 - Advertising
@@ -82,8 +83,8 @@ x-enrichment:
   artifacts_added: 0
   pass: local-v1
   note: Full contract-discovery pass run against boostmedia.com and boostctr.com; every /.well-known/*
-    and spec path returns a soft-200 parking shell, no real document. No artifacts written. Corrected the
-    stale "NXDOMAIN" claim in x-status-detail — the domain resolves again, but as a parked lander.
+    and spec path returns a soft-200 parking shell, no real document. No artifacts written. Corrected
+    the stale "NXDOMAIN" claim in x-status-detail — the domain resolves again, but as a parked lander.
 x-coverage:
   state: none
   reason: defunct
